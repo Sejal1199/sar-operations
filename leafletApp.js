@@ -167,11 +167,11 @@ var resizabletopright = new L.ResizableControl({
 mymap.addControl(resizabletopright);
 resizabletopright.setContent(html);
 
-$.getJSON('wind_demo.json', function(data) {
+$.getJSON('json/wind_10m.json', function(data) {
   var velocityLayer = L.velocityLayer({
     displayValues: true,
     displayOptions: {
-      velocityType: 'Global Wind',
+      velocityType: 'Global Wind [10m]',
       displayPosition: 'bottomleft',
       displayEmptyString: 'No wind data',
       speedUnit: 'nm',
@@ -180,14 +180,14 @@ $.getJSON('wind_demo.json', function(data) {
     maxVelocity: 18,
     minVelocity: 0,
   });
-  layerControl.addOverlay(velocityLayer, 'Wind - Global');
+  layerControl.addOverlay(velocityLayer, 'Wind [Ground+10m]');
 });
 
-$.getJSON('wind-2020-jan-13.json', function(data) {
+$.getJSON('json/wind_100m.json', function(data) {
   var velocityLayer = L.velocityLayer({
     displayValues: true,
     displayOptions: {
-      velocityType: 'Global Wind',
+      velocityType: 'Global Wind [100m]',
       displayPosition: 'bottomleft',
       displayEmptyString: 'No wind data',
       speedUnit: 'nm',
@@ -196,7 +196,7 @@ $.getJSON('wind-2020-jan-13.json', function(data) {
     maxVelocity: 18,
     minVelocity: 0,
   });
-  layerControl.addOverlay(velocityLayer, 'Wind - Global - Recent');
+  layerControl.addOverlay(velocityLayer, 'Wind [Ground+100m]');
 });
 
 // addCircle(22, 77, 500000);

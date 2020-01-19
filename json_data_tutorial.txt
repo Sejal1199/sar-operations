@@ -1,0 +1,16 @@
+#how to download wind data
+#grib2json utility by cambecc
+
+set YYYYMMDD = current date
+
+example url (10 metre above ground, u-v components of velocity)
+
+https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_1p00.pl?file=gfs.t00z.pgrb2.1p00.f000&lev_10_m_above_ground=on&var_UGRD=on&var_VGRD=on&leftlon=0&rightlon=360&toplat=90&bottomlat=-90&dir=%2Fgfs.20200119%2F00
+
+
+in cmd type :
+
+YYYYMMDD=<a date, for example: 20190119>
+curl "http://nomads.ncep.noaa.gov/cgi-bin/filter_gfs.pl?file=gfs.t00z.pgrb2.1p00.f000&lev_10_m_above_ground=on&var_UGRD=on&var_VGRD=on&dir=%2Fgfs.${YYYYMMDD}00" -o gfs.t00z.pgrb2.1p00.f000
+grib2json -d -n -o current-wind-surface-level-gfs-1.0.json gfs.t00z.pgrb2.1p00.f000
+cp current-wind-surface-level-gfs-1.0.json <earth-git-repository>/public/data/weather/current
