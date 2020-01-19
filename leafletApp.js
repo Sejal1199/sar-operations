@@ -148,7 +148,7 @@ function addCircle(lat, lon, radiusOfCircle = 5000) {
   }).addTo(mymap);
 }
 
-var html = '<div><input type="number">';
+var html = "AirCraft Selection Page";
 
 var resizabletopright = new L.ResizableControl({
   position: 'topright',
