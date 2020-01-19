@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+.leaflet-control {
+    cursor: crosshair;
+}
+
+a.polyline-measure-controlOnBgColor, a.polyline-measure-controlOnBgColor:hover {
+    background-color: #64db00;
+}
+
+.polyline-measure-unicode-icon {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+a.polyline-measure-clearControl:active {
+    background-color: #64db00;
+}
+
+.polyline-measure-tooltip {
+    font-size: 12px;
+    font-family: Montserrat, sans-serif;
+    line-height: 12px;
+    background-color: #ccc;
+    border-radius: 3px;
+    box-shadow: 1px 1px 4px #888;
+    margin: 0;
+    padding: 2px;
+    width: auto !important;
+    height: auto !important;
+    white-space: nowrap;
+    text-align: right;
+    font-family: Montserrat, sans-serif;
+}
+
+.polyline-measure-tooltip-end {
+    background-color: #ddd;
+}
+
+.polyline-measure-tooltip-total {
+    color: #006;
+    font-weight: bold;
+}
+
+.polyline-measure-tooltip-difference {
+    color: #060;
+    font-style: italic;
+}
+
+.polyline-measure-popupTooltip {
+    font-size: 11px;
+    font-family: Montserrat, sans-serif;
+    line-height: 11px;
+}

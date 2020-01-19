@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/000/552/728/non_2x/geo-location-pin-vector-icon.jpg">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" />
+    <link rel="stylesheet" href="css/Leaflet.ResizableControl.css" />
+
+    <link rel="stylesheet" href="css/Leaflet.PolylineMeasure.css" />
+    <link rel="stylesheet" href="css/Control.FullScreen.css" />
+
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="css/mapview.css">
+
+    <link rel="stylesheet" href="css/leaflet.mouseCoordinate.css" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+    <!-- <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" /> -->
+    <!-- <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script> -->
+    <script src="/src/leaflet-geoman.min.js" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="css/leaflet-geoman.css">
+    <script src="src/Leaflet.PolylineMeasure.js"></script>
+
+    <!-- <h1>SAR Operations with Leaflet.</h1> <hr> -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper grey darken-4">
+          <a href="home.html" class="brand-logo right"><h6>SAR//Operations</h6></a>
+          <a href="home.html" class="home-button">Home</a>
+          <a href="leafletIntegration.html" class="reload-button">Reload</a>
+          <a href="home.html" class="guide-button">Guide</a>
+        </div>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div id="mapid"></div>
+    </div>
+    <footer class="page-footer grey darken-4">
+      <div class="container center-align" id="buttonTrigger">
+        <a class="waves-effect waves-light btn-flat-large modal-trigger grey darken-4" href="#modal1"><i class="small material-icons">flight</i></a>
+      </div>
+    </footer>
+
+    <!-- origin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js"></script>
+
+    <script src="src/jquery.jscrollpane.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.js"></script>
+    <script src="src/Leaflet.ResizableControl.js"></script>
+
+    <!-- <link rel="stylesheet" href="wind-js-leaflet.css" />
+    <script src="wind-js-leaflet.js"></script> -->
+
+    <link rel="stylesheet" href="css/leaflet-velocity.css" />
+    <script src="src/leaflet-velocity.js"></script>
+
+    <script src="src/Leaflet.ResizableControl.js"></script>
+    <script src="src/leaflet.mouseCoordinate.js"></script>
+    <script src="src/Control.FullScreen.js"></script>
+
+
+    <!-- Contents of Modal Sheet-->
+    <div id="modal1" class="modal bottom-sheet">
+      <div class="modal-content">
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s3">
+                <i class="material-icons prefix">speed</i>
+                <input id="icon_speed" type="number" class="validate" step="0.0001">
+                <label for="icon_speed">Speed</label>
+              </div>
+              <div class="input-field col s3">
+                <i class="material-icons prefix">error</i>
+                <input id="icon_lkp_x" type="number" class="validate" step="0.0001">
+                <label for="icon_lkp_x">Last Known Position Latitude</label>
+              </div>
+              <div class="input-field col s3">
+                <i class="material-icons prefix">flight_takeoff</i>
+                <input id="icon_start_x" type="number" class="validate" step="0.0001">
+                <label for="icon_start_x">Starting Latitude</label>
+              </div>
+              <div class="input-field col s3">
+                <i class="material-icons prefix">flight_land</i>
+                <input id="icon_destination_x" type="number" class="validate" step="0.0001">
+                <label for="icon_destination_x">Destination Latitude</label>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s3">
+            <i class="material-icons prefix">cloud</i>
+            <input id="icon_altitude" type="number" class="validate" step="0.0001">
+            <label for="icon_altitude">Altitude</label>
+          </div>
+          <div class="input-field col s3">
+            <i class="material-icons prefix">error_outline</i>
+            <input id="icon_lkp_y" type="number" class="validate" step="0.0001">
+            <label for="icon_lkp_y">Last Known Position Longitude</label>
+          </div>
+          <div class="input-field col s3">
+            <i class="material-icons prefix">flight_takeoff</i>
+            <input id="icon_start_y" type="number" class="validate" step="0.0001">
+            <label for="icon_start_y">Starting Longitude</label>
+          </div>
+          <div class="input-field col s3">
+            <i class="material-icons prefix">flight_land</i>
+            <input id="icon_destination_y" type="number" class="validate" step="0.0001">
+            <label for="icon_destination_y">Destination Longitude</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn  z-depth-4" id="inputButton" onclick="inititateInput()"><i class="large material-icons">check_circle</i></a>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="src/materialize.min.js"></script>
+
+    <!-- mainJS -->
+    <script src="src/p5.js" charset="utf-8"></script>
+    <script src="leafletApp.js" charset="utf-8"></script>
+    <script src="src/arc.js"></script>
+  </body>
+</html>

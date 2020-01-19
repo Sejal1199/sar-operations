@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" type="text/css" href="css/mapview.css">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <header>
+  </header>
+  <main>
+  </main>
+  <footer class="page-footer grey darken-4">
+    <div class="container center-align" id="buttonTrigger">
+      <a class="waves-effect waves-light btn-flat-large modal-trigger grey darken-4" href="#modal1"><i class="medium material-icons">flight</i></a>
+    </div>
+  </footer>
+
+  <!-- Contents of Modal Sheet-->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s3">
+              <i class="material-icons prefix">speed</i>
+              <input id="icon_speed" type="text" class="validate">
+              <label for="icon_speed">Speed</label>
+            </div>
+            <div class="input-field col s3">
+              <i class="material-icons prefix">error</i>
+              <input id="icon_lkp_x" type="tel" class="validate">
+              <label for="icon_lkp_x">Last Known Position Longitude</label>
+            </div>
+            <div class="input-field col s3">
+              <i class="material-icons prefix">flight_takeoff</i>
+              <input id="icon_start_x" type="tel" class="validate">
+              <label for="icon_start_x">Starting Longitude</label>
+            </div>
+            <div class="input-field col s3">
+              <i class="material-icons prefix">flight_land</i>
+              <input id="icon_destination_x" type="tel" class="validate">
+              <label for="icon_destination_x">Destination Longitude</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s3">
+          <i class="material-icons prefix">cloud</i>
+          <input id="icon_altitude" type="text" class="validate">
+          <label for="icon_altitude">Altitude</label>
+        </div>
+        <div class="input-field col s3">
+          <i class="material-icons prefix">error_outline</i>
+          <input id="icon_lkp_y" type="tel" class="validate">
+          <label for="icon_lkp_y">Last Known Position Latitude</label>
+        </div>
+        <div class="input-field col s3">
+          <i class="material-icons prefix">flight_takeoff</i>
+          <input id="icon_start_y" type="tel" class="validate">
+          <label for="icon_start_y">Starting Latitude</label>
+        </div>
+        <div class="input-field col s3">
+          <i class="material-icons prefix">flight_land</i>
+          <input id="icon_destination_y" type="tel" class="validate">
+          <label for="icon_destination_y">Destination Latitude</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn  z-depth-4"><i class="large material-icons">check_circle</i></a>
+    </div>
+  </div>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    M.AutoInit();
+  </script>
+</body>
+
+</html>

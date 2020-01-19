@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style media="screen">
+    body {
+      background-color: #212121;
+    }
+  </style>
+
+</head>
+
+
+<body>
+  <!--HEADER-->
+  <header>
+    <nav>
+      <div class="nav-wrapper grey darken-4">
+        <a href="home.html" class="brand-logo right"><h6>SAR//Operations</h6></a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+        <a href="home.html" class="guide-button">Home</a>
+        <a href="leafletIntegration.html" class="map-button">Map</a>
+        <a href="home.html" class="guide-button">Guide</a>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="slide-out">
+      <li class="active"><a href="#">About</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Access Database</a></li>
+    </ul>
+  </header>
+
+  <!-- MAIN-->
+
+  <main>
+    <div class="slider">
+      <ul class="slides">
+        <li>
+          <img src="res/fixed.jpg"> <!-- random image -->
+          <div class="caption left-align">
+            <h3>Precise</h3>
+            <h5 class="light grey-text text-darken-4">Search and Rescue Operations</h5>
+          </div>
+        </li>
+        <li>
+          <img src="res/heli2.jpg"> <!-- random image -->
+          <div class="caption right-align">
+            <h3>Dynamic</h3>
+            <h5 class="light grey-text text-darken-4">Shift between Land/Air/Maritime methods.</h5>
+          </div>
+        </li>
+        <li>
+          <img src="res/copboat.jpg"> <!-- random image -->
+          <div class="caption center-align">
+            <h3>Visual</h3>
+            <h5 class="light grey-text text-darken-4">Visualize every factor. On the go.</h5>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="src/materialize.min.js"></script>
+  <script type="text/javascript">
+    M.AutoInit();
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.slider').slider();
+    });
+  </script>
+</body>
+
+</html>
