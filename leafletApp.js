@@ -220,14 +220,14 @@ function inititateInput() {
   var lkpPopUp, startPopUp, endPopUp;
 
   var flightLandIcon = L.icon({
-    iconUrl: '/img/flight_land.png',
+    iconUrl: 'img/flight_land.png',
 
     iconSize: [25, 25], // size of the icon
     iconAnchor: [10, 30],
     popupAnchor: [0, -30]
   });
   var flightTakeOffIcon = L.icon({
-    iconUrl: '/img/flight_takeoff.png',
+    iconUrl: 'img/flight_takeoff.png',
 
     iconSize: [25, 25], // size of the icon
     iconAnchor: [10, 30],
