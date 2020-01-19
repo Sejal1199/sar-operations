@@ -13,6 +13,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 var layerControl = L.control.layers();
 layerControl.addTo(mymap);
 
+//add controls for geoman
 mymap.pm.addControls({
   position: 'topleft',
   color: 'orange',
