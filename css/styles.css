@@ -46,9 +46,16 @@ body {
   color: #AAA;
 }
 
+.logo-head {
+  font-family: Montserrat, sans-serif;
+  color: #AAA;
+  padding-left: 1200px;
+}
+
 h6 {
   color: #BBB;
   font-family: Montserrat, sans-serif;
+  font-size: 22px;
   text-align: right;
 }
 
