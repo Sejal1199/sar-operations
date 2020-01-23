@@ -24,7 +24,7 @@ mymap.pm.addControls({
 mymap.pm.setPathOptions({
   color: '#900000',
   fillColor: '#a00',
-  fillOpacity: 0.1,
+  fillOpacity: 0.2,
 });
 
 L.control.fullscreen({
