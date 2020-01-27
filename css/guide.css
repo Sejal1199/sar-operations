@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+.wrap-body {
+  margin-left: 250px;
+  background-color: #212121;
+  font-family: Montserrat, sans-serif;
+  padding-left: 20px;
+  color: #AAAAAA;
+}
+
+@media only screen and (max-width : 992px) {
+  body {
+    padding-left: 0;
+  }
+}
+
+header {
+  margin-left: 250px;
+}
+
+.home-button {
+  padding-left: 20px;
+  font-family: Montserrat, sans-serif;
+  color: #AAA;
+}
+
+.guide-button {
+  padding-left: 20px;
+  font-family: Montserrat, sans-serif;
+  color: #FFF;
+}
+
+h1 {
+  color: cyan;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.divider {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.reload-button {
+  padding-left: 20px;
+  font-family: Montserrat, sans-serif;
+  color: #AAA;
+}
+
+.map-button {
+  padding-left: 20px;
+  font-family: Montserrat, sans-serif;
+  color: #AAA;
+}
+
+.sidenav {
+  background-color: #222;
+  color: #AAA;
+  font-family: Montserrat, sans-serif;
+}
+
+.brand-logo {
+  font-family: Montserrat, sans-serif;
+  color: #AAA;
+}
+
+.logo-head {
+  font-family: Montserrat, sans-serif;
+  color: #AAA;
+  padding-left: 1200px;
+}
+
+#nav-mobile {
+  background-color: #252525;
+  font-family: Montserrat, sans-serif;
+  width: 250px;
+}
+
+.table-of-contents a.active {
+  /* font-weight: 500; */
+  padding-left: 14px;
+  border-left: 3px solid #00FFFF;
+  color: #00FFFF;
+}
+
+.table-of-contents a:hover {
+  color: #00CCCC;
+  padding-left: 15px;
+  border-left: 2px solid cyan
+}
+
+#content {
+  padding-right: 30px;
+  color: white;
+}
+
+.map {
+  margin-left: 40px;
+  margin-bottom: 40px;
+  height: 480px;
+  width: 900px;
+}
+
+h3 {
+  color: #CCCCCC;
+}
+
+.divider {
+  margin: 0 0 0 0;
+}
